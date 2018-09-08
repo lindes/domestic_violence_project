@@ -35,7 +35,7 @@ for url in urls:
 	#if there is a post text on this url
 	if len(post_content) > 0:
 		#pick only the top post because this is the actual post, the following ones are comments
-		for tag in pc[0]:
+		for tag in post_content[0]:
 			if 's1t8cjpc-0' in tag['class'] or 's1t8cjpc-4' in tag['class']:
 				for word in tag.get_text().split():
 					f.write(word.encode("utf8") + ', ')
